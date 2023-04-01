@@ -1,6 +1,8 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <chrono>
+
 #include "../include/SortMethod.h"
 #include "../include/Insertion.h"
 #include "../include/MergeSort.h"
@@ -47,12 +49,12 @@ int main()
         }
         do
         {
-            std::cout << "Choose the algorithm you want to use." << std::endl;
-            std::cout << "[1] Insertion." << std::endl;
-            std::cout << "[2] MergeSort." << std::endl;
-            std::cout << "[3] ShellSort." << std::endl;
-            std::cout << "[4] HeapSort." << std::endl;
-            std::cout << "[5] RadixSort." << std::endl;
+            std::cout << "\nChoose the algorithm you want to use." << std::endl;
+            std::cout << "[1] Insertion " << std::endl;
+            std::cout << "[2] MergeSort " << std::endl;
+            std::cout << "[3] ShellSort " << std::endl;
+            std::cout << "[4] HeapSort " << std::endl;
+            std::cout << "[5] RadixSort " << std::endl;
             std::cout << "Option: ";
             std::cin >> option_alg;
 
@@ -71,7 +73,7 @@ int main()
                 break;
             }
 
-            std::cout << "Original sequence: ";
+            std::cout << "\nOriginal sequence: ";
             for (size_t i = 0; i < sequence_size; i++)
             {
                 if (i == 0)
@@ -80,8 +82,14 @@ int main()
             }
             std::cout << std::endl;
 
-            std::cout << "Sorted sequence: " << std::endl;
+            std::cout << "\nSorted sequence: " << std::endl;
+            
+            auto start = std::chrono::high_resolution_clock::now();
             v->Sort();
+            auto end = std::chrono::high_resolution_clock::now();
+            
+            auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
+            std::cout << "\nTime taken by function: " << duration.count() << " ms" << std::endl;
 
             std::cout << std::endl;
             std::cout << "[1] Use other algorithm" << std::endl;
