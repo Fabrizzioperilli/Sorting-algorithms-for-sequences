@@ -3,5 +3,6 @@
     "*.tpp": "cpp",
     "iostream": "cpp"
   },
-  "terminal.integrated.shell.windows": "cmd.exe"
+  "terminal.integrated.shell.windows": "cmd.exe",
+  "livePreview.defaultPreviewPath": "/doc/html/index.html"
 }

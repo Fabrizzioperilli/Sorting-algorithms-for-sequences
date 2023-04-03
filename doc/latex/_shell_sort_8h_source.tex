@@ -1,0 +1,47 @@
+\hypertarget{_shell_sort_8h_source}{}\doxysection{Shell\+Sort.\+h}
+\label{_shell_sort_8h_source}\index{include/ShellSort.h@{include/ShellSort.h}}
+\mbox{\hyperlink{_shell_sort_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_sort_method_8h}{SortMethod.h}}"{}}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{template} <\textcolor{keyword}{class} Key>}
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{class_shell_sort}{ShellSort}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_sort_method}{SortMethod}}<Key>}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17 \textcolor{keyword}{public}:}
+\DoxyCodeLine{18   \mbox{\hyperlink{class_shell_sort_ad1081e62ea427aad90e9ea4a39d11ad6}{ShellSort}}(std::vector<Key>, \textcolor{keywordtype}{unsigned});}
+\DoxyCodeLine{19   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shell_sort_aa0b59f06a151b7ba6033cac2ec6e36f3}{Sort}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{20 \};}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{29 \textcolor{keyword}{template} <\textcolor{keyword}{class} Key>}
+\DoxyCodeLine{30 \mbox{\hyperlink{class_shell_sort_ad1081e62ea427aad90e9ea4a39d11ad6}{ShellSort<Key>::ShellSort}}(std::vector<Key> seq, \textcolor{keywordtype}{unsigned} size) : \mbox{\hyperlink{class_sort_method}{SortMethod}}<Key>(seq, size) \{\}}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 }
+\DoxyCodeLine{38 \textcolor{keyword}{template} <\textcolor{keyword}{class} Key>}
+\DoxyCodeLine{39 \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shell_sort_aa0b59f06a151b7ba6033cac2ec6e36f3}{ShellSort<Key>::Sort}}()}
+\DoxyCodeLine{40 \{}
+\DoxyCodeLine{41   \textcolor{keywordtype}{int} count = 0;}
+\DoxyCodeLine{42   \textcolor{keywordtype}{int} alfa = this-\/>size\_ / 2;}
+\DoxyCodeLine{43   \textcolor{keywordtype}{int} aux, pos;}
+\DoxyCodeLine{44   std::cout << \textcolor{stringliteral}{"{}Alfa: "{}} << alfa << std::endl;}
+\DoxyCodeLine{45   \textcolor{keywordflow}{while} (alfa > 0)}
+\DoxyCodeLine{46   \{}
+\DoxyCodeLine{47     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = alfa; i < this-\/>size\_; i++)}
+\DoxyCodeLine{48     \{}
+\DoxyCodeLine{49       pos = i;}
+\DoxyCodeLine{50       aux = this-\/>seq\_[i];}
+\DoxyCodeLine{51       \textcolor{keywordflow}{while} (pos >= alfa \&\& aux < this-\/>seq\_[pos -\/ alfa])}
+\DoxyCodeLine{52       \{}
+\DoxyCodeLine{53         std::swap(this-\/>seq\_[pos], this-\/>seq\_[pos -\/ alfa]);}
+\DoxyCodeLine{54         pos -\/= alfa;}
+\DoxyCodeLine{55       \}}
+\DoxyCodeLine{56       this-\/>Write(count);}
+\DoxyCodeLine{57       count++;}
+\DoxyCodeLine{58     \}}
+\DoxyCodeLine{59     alfa /= 2;}
+\DoxyCodeLine{60     \textcolor{keywordflow}{if} (alfa > 0)}
+\DoxyCodeLine{61       std::cout << \textcolor{stringliteral}{"{}Alfa: "{}} << alfa << std::endl;}
+\DoxyCodeLine{62   \}}
+\DoxyCodeLine{63 \}}
+
+\end{DoxyCode}
