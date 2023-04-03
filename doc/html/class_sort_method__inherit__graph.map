@@ -1,8 +1,0 @@
-<map id="SortMethod&lt; Key &gt;" name="SortMethod&lt; Key &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="292,5,428,32"/>
-<area shape="rect" id="node2" href="$class_heap_sort.html" title=" " alt="" coords="5,80,128,107"/>
-<area shape="rect" id="node3" href="$class_insertion.html" title=" " alt="" coords="153,80,271,107"/>
-<area shape="rect" id="node4" href="$class_merge_sort.html" title=" " alt="" coords="295,80,425,107"/>
-<area shape="rect" id="node5" href="$class_radix_sort.html" title=" " alt="" coords="449,80,575,107"/>
-<area shape="rect" id="node6" href="$class_shell_sort.html" title=" " alt="" coords="600,80,723,107"/>
-</map>

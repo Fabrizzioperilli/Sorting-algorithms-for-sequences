@@ -1,9 +1,0 @@
-<map id="include/SortMethod.h" name="include/SortMethod.h">
-<area shape="rect" id="node1" title="This a abstract class that contains the basic methods for the sorting algorithms." alt="" coords="283,5,428,32"/>
-<area shape="rect" id="node2" href="$_heap_sort_8h.html" title="This file contains the HeapSort class." alt="" coords="5,80,137,107"/>
-<area shape="rect" id="node3" href="$main_8cc.html" title="This file contains the main function of the program." alt="" coords="310,155,401,181"/>
-<area shape="rect" id="node4" href="$_insertion_8h_source.html" title=" " alt="" coords="213,80,340,107"/>
-<area shape="rect" id="node5" href="$_merge_sort_8h.html" title="This file contains the MergeSort class." alt="" coords="365,80,503,107"/>
-<area shape="rect" id="node6" href="$_radix_sort_8h.html" title="This file contains the RadixSort class." alt="" coords="528,80,663,107"/>
-<area shape="rect" id="node7" href="$_shell_sort_8h.html" title="This file contains the ShellSort class." alt="" coords="687,80,818,107"/>
-</map>
