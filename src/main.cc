@@ -6,6 +6,7 @@
 #include "../include/SortMethod.h"
 #include "../include/Insertion.h"
 #include "../include/MergeSort.h"
+#include "../include/ShellSort.h"
 
 int main()
 {
@@ -67,6 +68,9 @@ int main()
             case 2:
                 v = new MergeSort<long>(seq, sequence_size);
                 break;
+            case 3:
+                v = new ShellSort<long>(seq, sequence_size);
+                break;
             default:
                 std::cout << "Wrong option. Enter option again" << std::endl;
                 exit(EXIT_FAILURE);
@@ -87,7 +91,7 @@ int main()
             auto start = std::chrono::high_resolution_clock::now();
             v->Sort();
             auto end = std::chrono::high_resolution_clock::now();
-            
+
             auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
             std::cout << "\nTime taken by function: " << duration.count() << " ms" << std::endl;
 
