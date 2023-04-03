@@ -1,0 +1,46 @@
+\hypertarget{_sort_method_8h_source}{}\doxysection{Sort\+Method.\+h}
+\label{_sort_method_8h_source}\index{include/SortMethod.h@{include/SortMethod.h}}
+\mbox{\hyperlink{_sort_method_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{template} <\textcolor{keyword}{class} Key>}
+\DoxyCodeLine{17 \textcolor{keyword}{class }\mbox{\hyperlink{class_sort_method}{SortMethod}}}
+\DoxyCodeLine{18 \{}
+\DoxyCodeLine{19 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{20   \textcolor{keywordtype}{unsigned} size\_;}
+\DoxyCodeLine{21   std::vector<Key> seq\_;}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{keyword}{public}:}
+\DoxyCodeLine{24   \mbox{\hyperlink{class_sort_method}{SortMethod}}() \{\}}
+\DoxyCodeLine{25   \mbox{\hyperlink{class_sort_method}{SortMethod}}(std::vector<Key>, \textcolor{keywordtype}{unsigned});}
+\DoxyCodeLine{26   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} Sort() = 0;}
+\DoxyCodeLine{27   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_sort_method_ae8efe0c1c6b66f396455b272b00e28bb}{Write}}(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{28 \};}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 }
+\DoxyCodeLine{38 \textcolor{keyword}{template} <\textcolor{keyword}{class} Key>}
+\DoxyCodeLine{39 \mbox{\hyperlink{class_sort_method}{SortMethod<Key>::SortMethod}}(std::vector<Key> seq, \textcolor{keywordtype}{unsigned} size)}
+\DoxyCodeLine{40 \{}
+\DoxyCodeLine{41   seq\_ = seq;}
+\DoxyCodeLine{42   size\_ = size;}
+\DoxyCodeLine{43 \}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 }
+\DoxyCodeLine{52 \textcolor{keyword}{template} <\textcolor{keyword}{class} Key>}
+\DoxyCodeLine{53 \textcolor{keywordtype}{void} \mbox{\hyperlink{class_sort_method_ae8efe0c1c6b66f396455b272b00e28bb}{SortMethod<Key>::Write}}(\textcolor{keywordtype}{int} count)}
+\DoxyCodeLine{54 \{}
+\DoxyCodeLine{55   std::cout << \textcolor{stringliteral}{"{}i: "{}} << count << \textcolor{stringliteral}{"{} -\/-\/>"{}};}
+\DoxyCodeLine{56   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} i = 0; i < size\_; i++)}
+\DoxyCodeLine{57   \{}
+\DoxyCodeLine{58     \textcolor{keywordflow}{if} (i == 0)}
+\DoxyCodeLine{59       std::cout << \textcolor{stringliteral}{"{} | "{}};}
+\DoxyCodeLine{60     std::cout << seq\_[i] << \textcolor{stringliteral}{"{} | "{}};}
+\DoxyCodeLine{61   \}}
+\DoxyCodeLine{62   std::cout << std::endl;}
+\DoxyCodeLine{63 \}}
+
+\end{DoxyCode}
