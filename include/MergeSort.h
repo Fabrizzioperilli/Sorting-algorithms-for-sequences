@@ -1,3 +1,14 @@
+/**
+ * @file MergeSort.h
+ * @author Fabrizzio Daniell Perilli Martin alu0101138589@ull.edu.es
+ * @brief This file contains the MergeSort class.
+ * @version 0.1
+ * @date 2023-04-03
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
+
 #include "../include/SortMethod.h"
 
 template <class Key>
@@ -13,9 +24,22 @@ private:
   int count = 0;
 };
 
+/**
+ * @brief Construct a new Merge Sort< Key>:: Merge Sort object
+ * 
+ * @tparam Key 
+ * @param seq 
+ * @param size 
+ */
 template <class Key>
 MergeSort<Key>::MergeSort(std::vector<Key> seq, unsigned size) : SortMethod<Key>(seq, size) {}
 
+
+/**
+ * @brief Sort the sequence using the MergeSort algorithm.
+ * 
+ * @tparam Key 
+ */
 template <class Key>
 void MergeSort<Key>::Sort()
 {
@@ -24,6 +48,14 @@ void MergeSort<Key>::Sort()
   count++;
 }
 
+
+/**
+ * @brief Divide the sequence in two parts and call the Merge function.
+ * 
+ * @tparam Key 
+ * @param ini 
+ * @param fin 
+ */
 template <class Key>
 void MergeSort<Key>::Divide(int ini, int fin)
 {
@@ -39,6 +71,15 @@ void MergeSort<Key>::Divide(int ini, int fin)
   }
 }
 
+
+/**
+ * @brief Merge of the sequence.
+ * 
+ * @tparam Key 
+ * @param ini 
+ * @param middle 
+ * @param fin 
+ */
 template <class Key>
 void MergeSort<Key>::Merge(int ini, int middle, int fin)
 {

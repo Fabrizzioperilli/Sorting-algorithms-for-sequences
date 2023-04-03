@@ -1,3 +1,14 @@
+/**
+ * @file HeapSort.h
+ * @author Fabrizzio Daniell Perilli Martin alu0101138589@ull.edu.es
+ * @brief This file contains the HeapSort class.
+ * @version 0.1
+ * @date 2023-04-03
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
+
 #include "SortMethod.h"
 
 template <class Key>
@@ -8,9 +19,22 @@ public:
   void Sort() override;
 };
 
+/**
+ * @brief Construct a new Heap Sort< Key>:: Heap Sort object
+ * 
+ * @tparam Key 
+ * @param seq 
+ * @param size 
+ */
 template <class Key>
 HeapSort<Key>::HeapSort(std::vector<Key> seq, unsigned size) : SortMethod<Key>(seq, size) {}
 
+
+/**
+ * @brief Sort the sequence using the HeapSort algorithm.
+ * 
+ * @tparam Key 
+ */
 template <class Key>
 void HeapSort<Key>::Sort()
 {

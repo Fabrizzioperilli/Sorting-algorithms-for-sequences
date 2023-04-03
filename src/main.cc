@@ -1,3 +1,14 @@
+/**
+ * @file main.cc
+ * @author Fabrizzio Daniell Perilli Martin alu0101138589@ull.edu.es
+ * @brief This file contains the main function of the program.
+ * @version 0.1
+ * @date 2023-04-03
+ *
+ * @copyright Copyright (c) 2023
+ *
+ */
+
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -101,7 +112,7 @@ int main()
             std::cout << std::endl;
 
             std::cout << "\nSorted sequence: " << std::endl;
-            
+
             auto start = std::chrono::high_resolution_clock::now();
             v->Sort();
             auto end = std::chrono::high_resolution_clock::now();
@@ -116,7 +127,7 @@ int main()
             std::cout << "Option: ";
             std::cin >> option_menu;
 
-        } while (option_menu == 1 );
+        } while (option_menu == 1);
     } while (option_menu == 2);
 
     return 0;
