@@ -7,6 +7,8 @@
 #include "../include/Insertion.h"
 #include "../include/MergeSort.h"
 #include "../include/ShellSort.h"
+#include "../include/HeapSort.h"
+#include "../include/RadixSort.h"
 
 int main()
 {
@@ -19,6 +21,12 @@ int main()
         std::cout << "---Sorting algorithms for sequences.---" << std::endl;
         std::cout << "Enter the size of sequence: ";
         std::cin >> sequence_size;
+
+        if (sequence_size <= 0)
+        {
+            std::cout << "The sequence size must be greater than 0." << std::endl;
+            exit(EXIT_FAILURE);
+        }
 
         std::cout << "Do you want insert the sequence values manually or randomly? " << std::endl;
         std::cout << "[1] Manual " << std::endl;
@@ -70,6 +78,12 @@ int main()
                 break;
             case 3:
                 v = new ShellSort<long>(seq, sequence_size);
+                break;
+            case 4:
+                v = new HeapSort<long>(seq, sequence_size);
+                break;
+            case 5:
+                v = new RadixSort<long>(seq, sequence_size);
                 break;
             default:
                 std::cout << "Wrong option. Enter option again" << std::endl;
