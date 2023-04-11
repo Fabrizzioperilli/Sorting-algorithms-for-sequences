@@ -45,6 +45,7 @@ int main()
         std::cout << "Option:  ";
         std::cin >> option_value_seq;
 
+        bool trace = false;
         switch (option_value_seq)
         {
         case 1:
@@ -56,6 +57,7 @@ int main()
                 std::cin >> value;
                 seq.push_back(value);
             }
+            trace = true;
             break;
         case 2:
             srand(time(NULL));
@@ -78,28 +80,10 @@ int main()
             std::cout << "Option: ";
             std::cin >> option_alg;
 
-            SortMethod<long> *v;
-            switch (option_alg)
+            if (option_alg < 1 || option_alg > 5)
             {
-            case 1:
-                v = new Insertion<long>(seq, sequence_size);
-                break;
-            case 2:
-                v = new MergeSort<long>(seq, sequence_size);
-                break;
-            case 3:
-                v = new ShellSort<long>(seq, sequence_size);
-                break;
-            case 4:
-                v = new HeapSort<long>(seq, sequence_size);
-                break;
-            case 5:
-                v = new RadixSort<long>(seq, sequence_size);
-                break;
-            default:
-                std::cout << "Wrong option. Enter option again" << std::endl;
+                std::cout << "Wrong option." << std::endl;
                 exit(EXIT_FAILURE);
-                break;
             }
 
             std::cout << "\nOriginal sequence: ";
@@ -111,10 +95,17 @@ int main()
             }
             std::cout << std::endl;
 
+            std::vector<SortMethod<long> *> algorithms(5);
+            algorithms[0] = new Insertion<long>(seq, sequence_size, trace);
+            algorithms[1] = new MergeSort<long>(seq, sequence_size, trace);
+            algorithms[2] = new ShellSort<long>(seq, sequence_size, trace);
+            algorithms[3] = new HeapSort<long>(seq, sequence_size, trace);
+            algorithms[4] = new RadixSort<long>(seq, sequence_size, trace);
+
             std::cout << "\nSorted sequence: " << std::endl;
 
             auto start = std::chrono::high_resolution_clock::now();
-            v->Sort();
+            algorithms[option_alg - 1]->Sort();
             auto end = std::chrono::high_resolution_clock::now();
 
             auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start);

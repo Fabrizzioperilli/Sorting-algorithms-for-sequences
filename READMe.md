@@ -2,7 +2,7 @@
 
 ### Description
 
-Through this program developed in c++ we can study the different types of sorting algorithms that exist and their complexity. The following algorithms are used:
+Through this program developed in c++17 we can study the different types of sorting algorithms that exist and their complexity. The following algorithms are used:
 
 - Insertion
 - Mergesort

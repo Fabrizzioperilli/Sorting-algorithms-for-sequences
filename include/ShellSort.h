@@ -10,12 +10,13 @@
  */
 
 #include "SortMethod.h"
+#include "FuntionsSort.h"
 
 template <class Key>
 class ShellSort : public SortMethod<Key>
 {
 public:
-  ShellSort(std::vector<Key>, unsigned);
+  ShellSort(std::vector<Key>, unsigned, bool = false);
   void Sort() override;
 };
 
@@ -25,9 +26,10 @@ public:
  * @tparam Key 
  * @param seq 
  * @param size 
+ * @param trace
  */
 template <class Key>
-ShellSort<Key>::ShellSort(std::vector<Key> seq, unsigned size) : SortMethod<Key>(seq, size) {}
+ShellSort<Key>::ShellSort(std::vector<Key> seq, unsigned size, bool trace) : SortMethod<Key>(seq, size, trace) {}
 
 
 /**
@@ -38,26 +40,5 @@ ShellSort<Key>::ShellSort(std::vector<Key> seq, unsigned size) : SortMethod<Key>
 template <class Key>
 void ShellSort<Key>::Sort()
 {
-  int count = 0;
-  int alfa = this->size_ / 2;
-  int aux, pos;
-  std::cout << "Alfa: " << alfa << std::endl;
-  while (alfa > 0)
-  {
-    for (size_t i = alfa; i < this->size_; i++)
-    {
-      pos = i;
-      aux = this->seq_[i];
-      while (pos >= alfa && aux < this->seq_[pos - alfa])
-      {
-        std::swap(this->seq_[pos], this->seq_[pos - alfa]);
-        pos -= alfa;
-      }
-      this->Write(count);
-      count++;
-    }
-    alfa /= 2;
-    if (alfa > 0)
-      std::cout << "Alfa: " << alfa << std::endl;
-  }
+  shellSortMethod(this->seq_, this->size_, this->trace_);
 }
