@@ -1,5 +1,5 @@
 CXX		  := g++
-CXX_FLAGS := -Wall -Wextra -std=c++17 -ggdb -Wno-class-conversion
+CXX_FLAGS := -w -Wextra -std=c++17 -ggdb 
 
 BIN		:= bin
 SRC		:= src

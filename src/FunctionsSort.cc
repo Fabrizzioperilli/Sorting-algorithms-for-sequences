@@ -1,5 +1,5 @@
 /**
- * @file FuntionsSort.h
+ * @file FunctionsSort.cc
  * @author Fabrizzio Daniell Perilli Martin
  * @brief This file contains the functions that are used in method Sort of the derived classes.
  * @version 0.1

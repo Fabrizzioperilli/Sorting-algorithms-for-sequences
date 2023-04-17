@@ -10,7 +10,7 @@
  */
 
 #include "SortMethod.h"
-#include "FuntionsSort.h"
+#include "../src/FunctionsSort.cc"
 
 template <class Key>
 class MergeSort : public SortMethod<Key>
